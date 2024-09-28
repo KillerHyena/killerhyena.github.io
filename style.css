@@ -1,7 +1,7 @@
 /* Global Styles */
 * {
-    margin: 10;
-    padding: 10;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ body {
 
 /* Ensure no margin on body */
 body {
-    margin: 0;  /* This ensures no margin around the body */
+    margin: 5;  /* This ensures no margin around the body */
 }
 
 a {
