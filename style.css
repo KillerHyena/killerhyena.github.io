@@ -196,7 +196,6 @@ button:hover {
 }
 
 /* Gallery */
-/* Event Gallery Section */
 /* Gallery Section */
 .gallery {
     padding: 40px;
@@ -208,16 +207,37 @@ button:hover {
     animation: fadeIn 1s ease; /* Optional: Add animation */
 }
 
+.gallery h2 {
+    width: 100%; /* Make the heading take the full width */
+    text-align: center; /* Center the heading */
+    font-size: 2.5rem; /* Adjust font size */
+    color: #004B87; /* Match the color scheme */
+    margin-bottom: 20px; /* Space below heading */
+}
+
 .gallery img {
-    max-width: 300px; /* Set a maximum width for images */
+    max-width: 200px; /* Set a smaller maximum width for images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    transition: transform 0.3s ease; /* Animation effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.1); /* Slightly larger scale effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Optional: Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
