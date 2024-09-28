@@ -16,7 +16,7 @@ body {
 
 /* Ensure no margin on body */
 body {
-    margin: 5;  /* This ensures no margin around the body */
+    margin: 20;  /* This ensures no margin around the body */
 }
 
 a {
