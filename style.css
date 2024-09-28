@@ -75,6 +75,10 @@ p {
     padding: 20px;
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .gallery img {
