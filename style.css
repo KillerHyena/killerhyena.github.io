@@ -202,7 +202,7 @@ button:hover {
     display: flex;
     justify-content: center; /* Center the items */
     flex-wrap: wrap;
-    gap: 20px; /* Space between images */
+    gap: 15px; /* Space between images */
     margin-top: 60px; /* Space above the gallery */
     animation: fadeIn 1s ease; /* Optional: Add animation */
 }
@@ -216,10 +216,10 @@ button:hover {
 }
 
 .gallery img {
-    max-width: 200px; /* Set a smaller maximum width for images */
+    max-width: 150px; /* Set a smaller maximum width for images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
 }
 
@@ -239,6 +239,7 @@ button:hover {
         transform: translateY(0);
     }
 }
+
 
 
 /* Form Styles */
