@@ -37,6 +37,13 @@ header nav ul li a {
     max-width: 800px;  /* Optional: Limit the width for better readability */
 }
 
+.registration {
+    text-align: center;
+    padding: 50px 20px;  /* Adjust padding for better spacing */
+    margin: 0 auto;
+    max-width: 800px;  /* Optional: Limit the width for better readability */
+}
+
 .contact {
     text-align: center;
     padding: 50px 20px;  /* Adjust padding for better spacing */
