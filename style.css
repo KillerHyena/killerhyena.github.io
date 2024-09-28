@@ -44,6 +44,13 @@ header nav ul li a {
     max-width: 800px;  /* Optional: Limit the width for better readability */
 }
 
+.login {
+    text-align: center;
+    padding: 50px 20px;  /* Adjust padding for better spacing */
+    margin: 0 auto;
+    max-width: 800px;  /* Optional: Limit the width for better readability */
+}
+
 .contact {
     text-align: center;
     padding: 50px 20px;  /* Adjust padding for better spacing */
@@ -83,15 +90,13 @@ p {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    padding: 50px 20px;
-    margin: 0 auto;
-    max-width: 800px;
 }
 
 .gallery img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    text-align: center;
 }
 
 form {
