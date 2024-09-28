@@ -58,7 +58,7 @@ header nav ul li a {
     max-width: 800px;  /* Optional: Limit the width for better readability */
 }
 .hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('https://www.google.com/imgres?q=nsut%20iif&imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2Fv2%2FC510BAQG5eBfE1dIVFg%2Fcompany-logo_200_200%2Fcompany-logo_200_200%2F0%2F1630630128844%2Fxpreco_logo%3Fe%3D2147483647%26v%3Dbeta%26t%3DzEicFVoMmWpG0CKDIbAmRQCt-J3JLe0lNse_czVeANU&imgrefurl=https%3A%2F%2Fin.linkedin.com%2Fcompany%2Fnsutiif&docid=bCE7x4k-TMSTHM&tbnid=ScFR36EXZZzdlM&vet=12ahUKEwiP17XIoeaIAxWbhq8BHThFHMsQM3oECBkQAA..i&w=200&h=200&hcb=2&ved=2ahUKEwiP17XIoeaIAxWbhq8BHThFHMsQM3oECBkQAA') no-repeat center center/cover;
     height: 60vh;
     text-align: center;
     display: flex;
