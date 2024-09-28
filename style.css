@@ -197,27 +197,29 @@ button:hover {
 
 /* Gallery */
 /* Event Gallery Section */
+/* Gallery Section */
 .gallery {
     padding: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center the items */
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Space between images */
     margin-top: 60px; /* Space above the gallery */
     animation: fadeIn 1s ease; /* Optional: Add animation */
 }
 
 .gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    max-width: 300px; /* Set a maximum width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Animation effect */
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Scale effect on hover */
 }
+
 
 /* Form Styles */
 form {
