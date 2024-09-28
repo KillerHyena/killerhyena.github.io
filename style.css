@@ -1,6 +1,6 @@
 /* Global Styles */
 * {
-    margin: 20px;
+    margin: 0;
     padding: 20px;
     margin-top: 60px;
     box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
 
 /* Ensure no margin on body */
 body {
-    margin: 20px;  /* This ensures no margin around the body */
+    margin: 0;  /* This ensures no margin around the body */
     margin-top: 60px;
 }
 
