@@ -1,3 +1,6 @@
+// Correct the Vite configuration
+import { defineConfig } from 'vite';
+import svelte from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig(({ command }) => {
     const isProduction = command === 'build';
@@ -6,6 +9,8 @@ export default defineConfig(({ command }) => {
         base: isProduction ? '/Phantasma-Dashboard/' : '/',
     };
 });
+
+// Form submission event listeners
 document.getElementById('registrationForm').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('You have successfully registered for the event!');
