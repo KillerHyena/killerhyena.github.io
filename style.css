@@ -130,6 +130,8 @@ button {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #546;
-    color: #245;
+    background-color: #300;
+    color: #100;
+    margin-top: 50px;
 }
+
