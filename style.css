@@ -134,4 +134,8 @@ footer {
     color: #36454F;
     margin-top: 50px;
 }
+footer p {
+    text-align: center;  /* Centers the text */
+    color: #d3d3d3;
+}
 
