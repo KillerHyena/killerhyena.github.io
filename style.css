@@ -6,12 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #476;
-    color: #333;
+    background-color: #FF6F61;
+    color: #004B87;
 }
 
 header {
-    background-color: #333;
+    background-color: #008080;
     padding: 1rem 0;
 }
 
@@ -26,7 +26,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #790;
+    color: #FFA500;
     text-decoration: none;
 }
 
@@ -35,6 +35,7 @@ header nav ul li a {
     padding: 50px 20px;  /* Adjust padding for better spacing */
     margin: 0 auto;
     max-width: 800px;  /* Optional: Limit the width for better readability */
+    color: #32CD32;
 }
 
 .registration {
@@ -42,6 +43,7 @@ header nav ul li a {
     padding: 50px 20px;  /* Adjust padding for better spacing */
     margin: 0 auto;
     max-width: 800px;  /* Optional: Limit the width for better readability */
+    color: #8A2BE2;
 }
 
 .login {
@@ -49,6 +51,7 @@ header nav ul li a {
     padding: 50px 20px;  /* Adjust padding for better spacing */
     margin: 0 auto;
     max-width: 800px;  /* Optional: Limit the width for better readability */
+    color: #40E0D0;
 }
 
 .contact {
@@ -56,6 +59,7 @@ header nav ul li a {
     padding: 50px 20px;  /* Adjust padding for better spacing */
     margin: 0 auto;
     max-width: 800px;  /* Optional: Limit the width for better readability */
+    color: #FF69B4;
 }
 .hero {
     background: url('https://www.google.com/imgres?q=nsut%20iif&imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2Fv2%2FC510BAQG5eBfE1dIVFg%2Fcompany-logo_200_200%2Fcompany-logo_200_200%2F0%2F1630630128844%2Fxpreco_logo%3Fe%3D2147483647%26v%3Dbeta%26t%3DzEicFVoMmWpG0CKDIbAmRQCt-J3JLe0lNse_czVeANU&imgrefurl=https%3A%2F%2Fin.linkedin.com%2Fcompany%2Fnsutiif&docid=bCE7x4k-TMSTHM&tbnid=ScFR36EXZZzdlM&vet=12ahUKEwiP17XIoeaIAxWbhq8BHThFHMsQM3oECBkQAA..i&w=200&h=200&hcb=2&ved=2ahUKEwiP17XIoeaIAxWbhq8BHThFHMsQM3oECBkQAA') no-repeat center center/cover;
@@ -65,7 +69,7 @@ header nav ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #789;
+    color: #4169E1;
 }
 
 h1, h2 {
@@ -79,8 +83,8 @@ p {
 
 .cta-button {
     padding: 10px 20px;
-    background-color: #666;
-    color: white;
+    background-color: #FFD700;
+    color: #00FFFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -91,6 +95,7 @@ p {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    color: #FF00FF;
 }
 
 .gallery img {
@@ -120,8 +125,8 @@ form input, form select, form textarea {
 
 button {
     padding: 10px 15px;
-    background-color: #007bff;
-    color: #678;
+    background-color: #FF1493;
+    color: #98FF98;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -130,13 +135,13 @@ button {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #300;
-    color: #0060ff;
+    background-color: #FF4500;
+    color: #00FFFF;
     margin-top: 50px;
-    border: 5px solid #d3d3d3;
+    border: 5px solid #CCFF00;
 }
 footer p {
     text-align: center;  /* Centers the text */
-    color: #d3d3d3;
+    color: #4B0082;
 }
 
