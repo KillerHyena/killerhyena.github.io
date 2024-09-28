@@ -262,10 +262,11 @@ footer {
     margin-top: 60px;
     border-top: 5px solid #FFD700;
     font-size: 1rem;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 footer p {
     color: #FFD700;
     font-weight: bold;
+    margin-top: 20px;
 }
