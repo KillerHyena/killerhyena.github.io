@@ -137,7 +137,7 @@ header nav ul li a:hover {
 .about, .registration, .login, .contact {
     text-align: center;
     padding: 60px 20px;
-    margin: 0 auto;
+    margin: 60px auto;  /* Increased margin for spacing */
     max-width: 900px;
     color: #004B87;
 }
