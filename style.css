@@ -14,11 +14,6 @@ body {
     transition: background-color 0.4s ease;
 }
 
-/* Ensure no margin on body */
-body {
-    margin: 0;  /* This ensures no margin around the body */
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -57,9 +52,6 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #FFD700;
 }
-
-/* Other styles remain unchanged... */
-
 
 /* Interactive Hero Section */
 .hero {
@@ -111,9 +103,11 @@ header nav ul li a:hover {
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -196,7 +190,6 @@ button:hover {
 }
 
 /* Gallery */
-/* Gallery Section */
 .gallery {
     padding: 40px;
     display: flex;
@@ -227,20 +220,6 @@ button:hover {
     transform: scale(1.1); /* Slightly larger scale effect on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
-
-/* Optional: Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 
 /* Form Styles */
 form {
