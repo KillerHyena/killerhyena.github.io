@@ -58,7 +58,7 @@ header .hamburger div {
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center nav links */
     gap: 25px;
 }
 
@@ -86,6 +86,73 @@ header nav ul.active {
     z-index: 9; /* Ensure it's on top */
 }
 
+/* Hide hamburger menu on desktop */
+@media (min-width: 769px) {
+    header .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    header nav ul {
+        display: flex; /* Ensure the navigation is shown */
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Extra padding for mobile due to fixed header */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items */
+        gap: 15px;
+        display: none; /* Hide nav links by default */
+    }
+
+    header .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column; /* Stack lines vertically */
+        padding: 10px; /* Padding around hamburger */
+    }
+
+    header nav ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust heading size for mobile */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+    }
+
+    .hero .cta-button {
+        padding: 10px 25px; /* Adjust button padding for mobile */
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    .gallery {
+        flex-direction: column; /* Stack gallery items vertically on mobile */
+        gap: 10px;
+    }
+
+    .about, .registration, .login, .contact {
+        padding: 20px; /* Adjust padding */
+        margin: 10px auto; /* Increased margin for spacing */
+    }
+
+    button {
+        padding: 10px 20px; /* Adjust button padding for mobile */
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Adjust footer size for mobile */
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -97,7 +164,6 @@ header nav ul.active {
     justify-content: center;
     text-align: center;
     color: #fff;
-    position: relative;
 }
 
 .hero h1 {
@@ -207,96 +273,6 @@ button:hover {
 }
 
 /* Responsive Layout with Flexbox and Grid */
-@media (max-width: 768px) {
-    body {
-        padding-top: 100px; /* Extra padding for mobile due to fixed header */
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    header .hamburger {
-        display: flex; /* Show hamburger on mobile */
-        flex-direction: column; /* Stack lines vertically */
-        padding: 10px; /* Padding around hamburger */
-    }
-
-    header nav ul {
-        display: none; /* Hide nav links by default */
-    }
-
-    header nav ul.active {
-        display: flex; /* Show the menu when active */
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero .cta-button {
-        padding: 10px 25px;
-        font-size: 1rem;
-    }
-
-    .gallery {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .about, .registration, .login, .contact {
-        padding: 20px;
-        margin: 10px auto;
-    }
-
-    button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    footer {
-        font-size: 0.9rem;
-    }
-}
-
-/* Gallery */
-.gallery {
-    padding: 40px;
-    display: flex;
-    justify-content: center; /* Center the items */
-    flex-wrap: wrap;
-    gap: 15px; /* Space between images */
-    margin-top: 60px; /* Space above the gallery */
-    animation: fadeIn 1s ease; /* Optional: Add animation */
-}
-
-.gallery h2 {
-    width: 100%; /* Make the heading take the full width */
-    text-align: center; /* Center the heading */
-    font-size: 2.5rem; /* Adjust font size */
-    color: #004B87; /* Match the color scheme */
-    margin-bottom: 20px; /* Space below heading */
-}
-
-.gallery img {
-    max-width: 150px; /* Set a smaller maximum width for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
-}
-
-.gallery img:hover {
-    transform: scale(1.1); /* Slightly larger scale effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-}
-
 @media (max-width: 768px) {
     .gallery {
         flex-direction: column;
