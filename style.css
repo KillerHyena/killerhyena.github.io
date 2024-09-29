@@ -36,6 +36,25 @@ header {
     top: 0;
 }
 
+header nav {
+    display: flex;
+    justify-content: space-between; /* Space between hamburger and nav links */
+    align-items: center; /* Center items vertically */
+}
+
+header .hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+header .hamburger div {
+    width: 30px; /* Width of the hamburger lines */
+    height: 3px; /* Height of the hamburger lines */
+    background-color: white; /* Hamburger line color */
+    margin: 5px; /* Space between lines */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -53,6 +72,18 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #FFD700;
+}
+
+/* Show active links when toggled */
+header nav ul.active {
+    display: flex; /* Show the menu when active */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position the menu */
+    top: 60px; /* Position below the header */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background: linear-gradient(90deg, #004B87, #008080); /* Match header background */
+    z-index: 9; /* Ensure it's on top */
 }
 
 /* Hero Section */
@@ -185,6 +216,20 @@ button:hover {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+    }
+
+    header .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column; /* Stack lines vertically */
+        padding: 10px; /* Padding around hamburger */
+    }
+
+    header nav ul {
+        display: none; /* Hide nav links by default */
+    }
+
+    header nav ul.active {
+        display: flex; /* Show the menu when active */
     }
 
     .hero h1 {
