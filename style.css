@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
     transition: background-color 0.4s ease;
-    scroll-padding-top: 70px; /* For fixed header */
+    padding-top: 60px; /* To prevent content being hidden behind the fixed header */
 }
 
 a {
@@ -20,8 +20,7 @@ a {
     color: inherit;
 }
 
-button,
-.cta-button {
+button, .cta-button {
     transition: all 0.3s ease;
 }
 
@@ -33,17 +32,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
-    top: 0; /* Ensure the header is positioned at the top */
-}
-
-/* Adjusted Padding for Sections */
-header + .about,
-header + .registration,
-header + .login,
-header + .contact,
-header + .hero,
-header + .gallery {
-    padding-top: 100px; /* Increase padding to ensure content isn't hidden by header */
+    top: 0;
 }
 
 header nav ul {
@@ -65,11 +54,11 @@ header nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Interactive Hero Section */
+/* Hero Section */
 .hero {
-    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('your-image-url.jpg') no-repeat center center/cover;
     height: 100vh;
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('your-image-url.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +69,7 @@ header nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     animation: fadeInDown 1.2s ease-in-out;
@@ -149,30 +138,20 @@ header nav ul li a:hover {
 }
 
 /* About, Registration, Login, and Contact Section */
-.about,
-.registration,
-.login,
-.contact {
+.about, .registration, .login, .contact {
     text-align: center;
     padding: 20px 20px;
     margin: 20px auto; /* Increased margin for spacing */
     max-width: 900px;
     color: #004B87;
-    padding-top: 100px; /* Ensure the content starts below the fixed header */
 }
 
-.about h2,
-.registration h2,
-.login h2,
-.contact h2 {
+.about h2, .registration h2, .login h2, .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.about p,
-.registration p,
-.login p,
-.contact p {
+.about p, .registration p, .login p, .contact p {
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto;
@@ -197,29 +176,46 @@ button:hover {
 
 /* Responsive Layout with Flexbox and Grid */
 @media (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Extra padding for mobile due to fixed header */
+    }
+
     header nav ul {
         flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .cta-button {
+        padding: 10px 25px;
+        font-size: 1rem;
     }
 
     .gallery {
         flex-direction: column;
+        gap: 10px;
     }
 
-    /* Scroll-padding for mobile view */
-    body {
-        scroll-padding-top: 90px; /* Adjust based on mobile header height */
+    .about, .registration, .login, .contact {
+        padding: 20px;
+        margin: 10px auto;
     }
 
-    .about,
-    .registration,
-    .login,
-    .contact {
-        padding-top: 100px; /* Ensure the content doesn't collide on mobile */
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
     }
 }
 
@@ -255,6 +251,18 @@ button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery img {
+        max-width: 80%; /* Adjust image size for mobile */
+        margin: 0 auto;
+    }
+}
+
 /* Form Styles */
 form {
     display: flex;
@@ -266,7 +274,6 @@ form {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     animation: fadeIn 1s ease;
-    padding-top: 100px; /* Ensure the content starts below the fixed header */
 }
 
 form label {
@@ -274,9 +281,7 @@ form label {
     margin: 10px 0 5px;
 }
 
-form input,
-form select,
-form textarea {
+form input, form select, form textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -285,9 +290,7 @@ form textarea {
     transition: border-color 0.3s ease-in-out;
 }
 
-form input:focus,
-form select:focus,
-form textarea:focus {
+form input:focus, form select:focus, form textarea:focus {
     border-color: #FF1493;
     outline: none;
 }
@@ -300,12 +303,9 @@ footer {
     color: #fff;
     margin-top: 60px;
     border-top: 5px solid #FFD700;
-    font-size: 1rem;
-    padding-top: 40px;
 }
 
 footer p {
     color: #FFD700;
     font-weight: bold;
-    margin-top: 20px;
 }
