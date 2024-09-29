@@ -296,6 +296,34 @@ form input:focus, form select:focus, form textarea:focus {
     outline: none;
 }
 
+/* Event Selection Styles */
+.event-selection-container {
+    position: relative; /* Relative position for the dropdown */
+    margin-bottom: 20px; /* Space below the dropdown */
+}
+
+/* Fixed select label */
+.event-selection-container label {
+    font-size: 1.2rem; /* Size for the label */
+    display: block; /* Make label block-level */
+    margin-bottom: 5px; /* Space below label */
+}
+
+/* Style the select box */
+.event-selection-container select {
+    width: 100%; /* Full width of container */
+    padding: 10px; /* Padding inside select */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border for select */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s ease-in-out; /* Transition for border color */
+}
+
+.event-selection-container select:focus {
+    border-color: #FF1493; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
 /* Footer */
 footer {
     text-align: center;
