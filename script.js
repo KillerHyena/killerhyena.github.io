@@ -1,4 +1,4 @@
-// Correct the Vite configuration
+// Vite configuration
 import { defineConfig } from 'vite';
 import svelte from '@sveltejs/vite-plugin-svelte';
 
@@ -10,40 +10,39 @@ export default defineConfig(({ command }) => {
     };
 });
 
-// Smooth scroll behavior for navigation links
+// Wait for the DOM to load before attaching event listeners
 document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('header nav ul li a');
-    const headerHeight = document.querySelector('header').offsetHeight; // Get header height
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
+    // Registration Form
+    const registrationForm = document.getElementById('registrationForm');
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href'); // Get target section ID
-            const targetElement = document.querySelector(targetId); // Get target element
-
-            if (targetElement) {
-                // Scroll to target element, adjusting for header height
-                window.scrollTo({
-                    top: targetElement.offsetTop - headerHeight, // Subtract header height
-                    behavior: 'smooth' // Smooth scroll effect
-                });
-            }
+            const submitButton = registrationForm.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Registration Completed';
+            submitButton.disabled = true; // Optional: Disable the button after submission
         });
-    });
+    }
 
-    // Form submission event listeners
-    document.getElementById('registrationForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('You have successfully registered for the event!'); // Feedback on successful registration
-    });
+    // Login Form
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const submitButton = loginForm.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Login Completed';
+            submitButton.disabled = true; // Optional: Disable the button after submission
+        });
+    }
 
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Login successful!'); // Feedback on successful login
-    });
-
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Your message has been sent!'); // Feedback on successful message send
-    });
+    // Contact Form
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Message Sent';
+            submitButton.disabled = true; // Optional: Disable the button after submission
+        });
+    }
 });
