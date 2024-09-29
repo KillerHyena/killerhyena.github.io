@@ -12,6 +12,7 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
     transition: background-color 0.4s ease;
+    scroll-padding-top: 70px; /* For fixed header */
 }
 
 a {
@@ -31,7 +32,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
-    top: 0;
+    top: 0;  /* Ensure the header is positioned at the top */
 }
 
 header nav ul {
@@ -122,15 +123,6 @@ header nav ul li a:hover {
     }
 }
 
-/* Section Scroll Fix */
-section::before {
-    content: "";
-    display: block;
-    height: 80px; /* Height of your fixed header */
-    margin-top: -80px; /* Negative margin equal to the height */
-    visibility: hidden;
-}
-
 /* Interactive Cards (e.g., Event, About Section) */
 .card {
     background-color: #fff;
@@ -152,6 +144,7 @@ section::before {
     margin: 20px auto;  /* Increased margin for spacing */
     max-width: 900px;
     color: #004B87;
+    padding-top: 70px; /* Padding to account for fixed header */
 }
 
 .about h2, .registration h2, .login h2, .contact h2 {
@@ -196,10 +189,14 @@ button:hover {
     .gallery {
         flex-direction: column;
     }
+    
+    /* Scroll-padding for mobile view */
+    body {
+        scroll-padding-top: 90px; /* Adjust based on mobile header height */
+    }
 
-    section::before {
-        height: 90px; /* Adjust for mobile header size */
-        margin-top: -90px;
+    .about, .registration, .login, .contact {
+        padding-top: 90px;
     }
 }
 
