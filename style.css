@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
     padding-top: 60px; /* Prevent content being hidden behind the fixed header */
-    scroll-padding-top: 70px; /* For fixed header */
 }
 
 a {
@@ -74,6 +73,12 @@ header nav ul {
     display: none; /* Hide the navigation by default */
     flex-direction: column; /* Stack links vertically */
     align-items: center; /* Center the links */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    right: 0;
+    background-color: #004B87; /* Match the header color */
+    padding: 1rem 0; /* Add some padding */
 }
 
 header nav ul.active {
