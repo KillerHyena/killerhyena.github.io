@@ -1,15 +1,3 @@
-// Vite configuration
-import { defineConfig } from 'vite';
-import svelte from '@sveltejs/vite-plugin-svelte';
-
-export default defineConfig(({ command }) => {
-    const isProduction = command === 'build';
-    return {
-        plugins: [svelte()],
-        base: isProduction ? '/Phantasma-Dashboard/' : '/',
-    };
-});
-
 // Wait for the DOM to load before attaching event listeners
 document.addEventListener('DOMContentLoaded', function () {
     // Hamburger menu toggle
