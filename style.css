@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
     transition: background-color 0.4s ease;
-    padding-top: 60px; /* To prevent content being hidden behind the fixed header */
+    padding-top: 60px; /* Prevent content being hidden behind the fixed header */
     scroll-padding-top: 70px; /* For fixed header */
 }
 
@@ -21,7 +21,8 @@ a {
     color: inherit;
 }
 
-button, .cta-button {
+button,
+.cta-button {
     transition: all 0.3s ease;
 }
 
@@ -32,8 +33,9 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 10; /* Ensure header is on top */
     top: 0;
+    min-height: 60px; /* Ensure sufficient height for visibility */
 }
 
 header .hamburger {
@@ -51,15 +53,16 @@ header .hamburger div {
     transition: all 0.3s ease;
 }
 
+/* Desktop Navigation Styles */
 header nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Flex for horizontal layout */
     justify-content: center;
-    gap: 25px;
+    gap: 25px; /* Space between links */
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #fff; /* Link color */
     font-weight: bold;
     font-size: 1.1rem;
     padding: 0.5rem;
@@ -67,12 +70,12 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #FFD700;
+    color: #FFD700; /* Hover effect */
 }
 
 /* Mobile Navigation Styles */
 header nav ul {
-    display: none; /* Hide the navigation by default */
+    display: none; /* Hide navigation by default on mobile */
     flex-direction: column; /* Stack links vertically */
     align-items: center; /* Center the links */
 }
@@ -165,7 +168,10 @@ header nav ul.active {
 }
 
 /* About, Registration, Login, and Contact Section */
-.about, .registration, .login, .contact {
+.about,
+.registration,
+.login,
+.contact {
     text-align: center;
     padding: 20px 20px;
     margin: 20px auto; /* Increased margin for spacing */
@@ -173,12 +179,18 @@ header nav ul.active {
     color: #004B87;
 }
 
-.about h2, .registration h2, .login h2, .contact h2 {
+.about h2,
+.registration h2,
+.login h2,
+.contact h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.about p, .registration p, .login p, .contact p {
+.about p,
+.registration p,
+.login p,
+.contact p {
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto;
@@ -239,7 +251,10 @@ button:hover {
         gap: 10px;
     }
 
-    .about, .registration, .login, .contact {
+    .about,
+    .registration,
+    .login,
+    .contact {
         padding: 20px;
         margin: 10px auto;
     }
@@ -316,7 +331,9 @@ form label {
     margin: 10px 0 5px;
 }
 
-form input, form select, form textarea {
+form input,
+form select,
+form textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -325,7 +342,9 @@ form input, form select, form textarea {
     transition: border-color 0.3s ease-in-out;
 }
 
-form input:focus, form select:focus, form textarea:focus {
+form input:focus,
+form select:focus,
+form textarea:focus {
     border-color: #FF1493;
     outline: none;
 }
@@ -365,7 +384,7 @@ footer {
     background-color: #004B87;
     color: #fff;
     margin-top: 60px;
-    border-top: 5px solid #FFD700;
+    border-top: 5px solid #FFD700; /* Top border for footer */
 }
 
 footer p {
