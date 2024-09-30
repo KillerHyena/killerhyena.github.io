@@ -12,6 +12,16 @@ export default defineConfig(({ command }) => {
 
 // Wait for the DOM to load before attaching event listeners
 document.addEventListener('DOMContentLoaded', function () {
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    // Event listener for hamburger menu
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 
     // Registration Form
     const registrationForm = document.getElementById('registrationForm');
