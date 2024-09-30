@@ -56,6 +56,10 @@ header nav ul {
     gap: 25px;
 }
 
+header nav ul li {
+    padding: 10px 20px;
+}
+
 header nav ul li a {
     color: #fff;
     font-weight: bold;
