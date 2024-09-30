@@ -4,44 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XYZ Startup Funding</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
+    <script type="module" src="script.js" defer></script> <!-- Ensure this path is correct -->
 </head>
 <body>
     <header>
         <nav>
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <div class="hamburger" id="hamburger">☰</div>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="events.html">Event Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="registration.html">Event Registration</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="services.html">Services</a></li>
             </ul>
         </nav>
     </header>
-
     <section class="hero">
         <h1>Welcome to XYZ Startup Funding</h1>
         <p>Empowering New Entrepreneurs by Turning Ideas into Reality</p>
         <a href="about.html" class="cta-button">Learn More</a>
     </section>
-    
     <footer>
-        <p>&copy; 2024 XYZ Startup Funding. All Rights Reserved.</p>
+        <p>© 2024 XYZ Startup Funding. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("nav-links");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-    </script>
 </body>
 </html>
