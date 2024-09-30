@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XYZ Startup Funding</title>
-    <script type="module" crossorigin src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script type="module" crossorigin src="script.js" defer></script> <!-- Added defer to ensure scripts run after HTML is loaded -->
 </head>
 <body>
     <header>
@@ -32,11 +32,11 @@
     <section class="hero">
         <h1>Welcome to XYZ Startup Funding</h1>
         <p>Empowering New Entrepreneurs by Turning Ideas into Reality</p>
-        <a href="about.html" class="cta-button">Learn More</a>
+        <a href="aboutus.html" class="cta-button">Learn More</a> <!-- Corrected link to match About Us -->
     </section>
     
     <footer>
-        <p align="center">&copy; 2024 XYZ Startup Funding. All Rights Reserved.</p>
+        <p>&copy; 2024 XYZ Startup Funding. All Rights Reserved.</p> <!-- Removed align attribute -->
     </footer>
 
     <!-- JavaScript to toggle mobile menu -->
