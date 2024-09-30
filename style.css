@@ -36,6 +36,21 @@ header {
     top: 0;
 }
 
+header .hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+header .hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -53,6 +68,17 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #FFD700;
+}
+
+/* Mobile Navigation Styles */
+header nav ul {
+    display: none; /* Hide the navigation by default */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center the links */
+}
+
+header nav ul.active {
+    display: flex; /* Show when active */
 }
 
 /* Hero Section */
@@ -181,10 +207,18 @@ button:hover {
         padding-top: 100px; /* Extra padding for mobile due to fixed header */
     }
 
+    header .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
     header nav ul {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+    }
+
+    header nav ul.active {
+        display: flex; /* Show the navigation when active */
     }
 
     .hero h1 {
