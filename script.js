@@ -16,43 +16,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
-    // Event listener for hamburger menu
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
     }
 
-    // Registration Form
-    const registrationForm = document.getElementById('registrationForm');
-    if (registrationForm) {
-        registrationForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const submitButton = registrationForm.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Registration Completed';
-            submitButton.disabled = true; // Optional: Disable the button after submission
-        });
+    // Function to handle form submissions
+    function handleFormSubmit(formId, successMessage) {
+        const form = document.getElementById(formId);
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const submitButton = form.querySelector('button[type="submit"]');
+                submitButton.textContent = successMessage;
+                submitButton.disabled = true; // Disable the button after submission
+            });
+        }
     }
 
-    // Login Form
-    const loginForm = document.getElementById('loginForm');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const submitButton = loginForm.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Login Completed';
-            submitButton.disabled = true; // Optional: Disable the button after submission
-        });
-    }
-
-    // Contact Form
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Message Sent';
-            submitButton.disabled = true; // Optional: Disable the button after submission
-        });
-    }
+    // Handle registration, login, and contact form submissions
+    handleFormSubmit('registrationForm', 'Registration Completed');
+    handleFormSubmit('loginForm', 'Login Completed');
+    handleFormSubmit('contactForm', 'Message Sent');
 });
