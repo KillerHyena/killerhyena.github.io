@@ -1,221 +1,225 @@
 /* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f5;
-    color: #333;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    padding-top: 60px; /* To prevent content being hidden behind the fixed header */
-    scroll-padding-top: 70px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding-top: 80px; /* Adjusted for fixed header */
+    scroll-padding-top: 80px; /* Prevents content being hidden when using anchor links */
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 button, .cta-button {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #004B87, #008080);
-    padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    top: 0;
+    background: linear-gradient(90deg, #004B87, #008080);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keeps the header fixed at the top */
+    width: 100%;
+    z-index: 1000; /* Ensures header stays on top of all other content */
+    top: 0;
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+header nav ul li {
+    display: inline-block;
 }
 
 header nav ul li a {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    transition: color 0.3s ease-in-out;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease-in-out;
 }
 
 header nav ul li a:hover {
-    color: #FFD700;
+    color: #FFD700;
 }
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('your-image-url.jpg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+    height: 100vh;
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('your-image-url.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    max-width: 600px;
-    margin: 20px auto;
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .hero .cta-button {
-    padding: 12px 30px;
-    background-color: #FFD700;
-    color: #004B87;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
+    padding: 12px 30px;
+    background-color: #FFD700;
+    color: #004B87;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 .hero .cta-button:hover {
-    background-color: #FFC107;
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: #FFC107;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
 .about, .registration, .login, .contact {
-    text-align: center;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    color: #004B87;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    color: #004B87;
 }
 
 .about h2, .registration h2, .login h2, .contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .about p, .registration p, .login p, .contact p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
 /* Gallery Section */
 .event-images {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .event-images img {
-    width: 250px;
-    border-radius: 10px;
+    width: 250px;
+    border-radius: 10px;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #004B87;
-    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: #004B87;
+    color: white;
 }
 
 /* Buttons */
 button {
-    padding: 12px 30px;
-    background-color: #FF1493;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 12px 30px;
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #ff0099;
-    transform: translateY(-3px);
+    background-color: #ff0099;
+    transform: translateY(-3px);
 }
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 
-    .hero p {
-        font-size: 1rem;
-    }
+    .hero p {
+        font-size: 1rem;
+    }
 
-    .about h2, .registration h2, .login h2, .contact h2 {
-        font-size: 2rem;
-    }
+    .about h2, .registration h2, .login h2, .contact h2 {
+        font-size: 2rem;
+    }
 
-    .event-images {
-        flex-direction: column;
-    }
+    .event-images {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 769px) {
-    .hero {
-        background-position: center;
-        height: 80vh;
-    }
+    .hero {
+        background-position: center;
+        height: 80vh;
+    }
 
-    .hero h1 {
-        font-size: 4rem;
-    }
+    .hero h1 {
+        font-size: 4rem;
+    }
 
-    .hero p {
-        font-size: 1.5rem;
-    }
+    .hero p {
+        font-size: 1.5rem;
+    }
 
-    .about p, .registration p, .login p, .contact p {
-        font-size: 1.2rem;
-    }
+    .about p, .registration p, .login p, .contact p {
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 1024px) {
-    /* Styles specifically for laptops and desktops */
-    .hero {
-        height: 90vh;
-    }
+    /* Styles specifically for laptops and desktops */
+    .hero {
+        height: 90vh;
+    }
 
-    .hero h1 {
-        font-size: 4.5rem;
-    }
+    .hero h1 {
+        font-size: 4.5rem;
+    }
 
-    .hero p {
-        font-size: 1.5rem;
-    }
+    .hero p {
+        font-size: 1.5rem;
+    }
 
-    header nav ul {
-        gap: 40px;
-    }
+    header nav ul {
+        gap: 40px;
+    }
 
-    .about p, .registration p, .login p, .contact p {
-        font-size: 1.3rem;
-    }
+    .about p, .registration p, .login p, .contact p {
+        font-size: 1.3rem;
+    }
 }
