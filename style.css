@@ -1,46 +1,60 @@
-/* CSS Styling */
+/* Basic styling for the body and container */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.container {
+/* Dashboard container and layout */
+.dashboard-container {
+    width: 95%;
+    max-width: 1200px;
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-#login-form input {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#login-form button {
-    padding: 10px 20px;
-    background-color: #28a745;
+/* KPI cards styling */
+.kpi-card {
+    display: inline-block;
+    width: 22%;
+    margin: 10px;
+    padding: 20px;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#login-form button:hover {
-    background-color: #218838;
+.kpi-card h3 {
+    font-size: 2em;
+    margin: 0;
 }
 
-#dashboard {
-    display: none; /* Initially hidden until user logs in */
+.kpi-card p {
+    margin: 5px 0 0;
+}
+
+/* Charts container layout */
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+canvas {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 10px;
+    width: 45%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
