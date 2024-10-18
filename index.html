@@ -7,24 +7,25 @@
     <title>KPI Dashboard</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-pf+8c05+yXk1+56zjV/9v+4X+MhnphBvr7P4MAF+y5oVqXq/G60uP60zT+xw" crossorigin="anonymous"></script> <!-- Socket.IO Library -->
     <script src="app.js" defer></script> <!-- Link to the JavaScript file with defer -->
 </head>
 <body>
     <div class="dashboard-container" role="main">
         <div class="kpi-card" style="background-color: #ff6f61;" aria-label="Last 2000 Subscribers">
-            <h3>628.23</h3>
-            <p>Last 2000 Subscribers</p>
+            <h3><span id="last-subscribers">628.23</span></h3>
+            <p>Last 1000 Subscribers</p>
         </div>
         <div class="kpi-card" style="background-color: #4caf50;" aria-label="Number of Orders Last Month">
-            <h3>780</h3>
+            <h3><span id="order-count">780</span></h3>
             <p>Number of Orders Last Month</p>
         </div>
         <div class="kpi-card" style="background-color: #2196f3;" aria-label="Average Profits Previous Month">
-            <h3>26.21</h3>
+            <h3><span id="average-profit">26.21</span></h3>
             <p>Average Profits Previous Month</p>
         </div>
-        <div class="kpi-card" style="background-color: #9c27b0;" aria-label="Average Users Visited per Day">
-            <h3>50.65</h3>
+        <div class="kpi-card" style="background-color: #9c27b0 ;" aria-label="Average Users Visited per Day">
+            <h3><span id="average-users">50.65</span></h3>
             <p>Average Users Visited per Day</p>
         </div>
 
