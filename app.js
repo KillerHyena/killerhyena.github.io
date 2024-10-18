@@ -113,7 +113,16 @@ async function createCharts() {
 // Establish WebSocket connection
 socket = io('https://example.com/api');
 
-// Listen for updates from the server
-socket.on('update', (data) => {
-    // Update KPI cards
-    document.getElementById('last-subscribers').
+// Assuming you've already established your Socket.IO connection
+
+socket.on('update-data', data => {
+  // Example: Update the "last-subscribers" KPI
+  document.getElementById('last-subscribers').textContent = data.lastSubscribers;
+
+  // Example: Update your line chart
+  const lineChart = Chart.getChart("lineChart");
+  if (lineChart) {
+    lineChart.data.datasets[0].data = data.lineChartData;
+    lineChart.update();
+  }
+});
