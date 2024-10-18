@@ -8,20 +8,33 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
+    <!-- Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- KPI Cards -->
+        <div class="kpi-card" style="background-color: #ff6f61;">
+            <h3>628.23</h3>
+            <p>Last 2000 Subscribers</p>
+        </div>
+        <div class="kpi-card" style="background-color: #4caf50;">
+            <h3>780</h3>
+            <p>Number of Orders Last Month</p>
+        </div>
+        <div class="kpi-card" style="background-color: #2196f3;">
+            <h3>26.21</h3>
+            <p>Average Profits Previous Month</p>
+        </div>
+        <div class="kpi-card" style="background-color: #9c27b0;">
+            <h3>50.65</h3>
+            <p>Average Users Visited per Day</p>
+        </div>
 
-    <!-- HTML Structure -->
-    <div id="login-page" class="container">
-        <form id="login-form">
-            <h2>Login</h2>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-
-    <div id="dashboard" class="container">
-        <h2>KPI Dashboard</h2>
-        <canvas id="myChart"></canvas>
+        <!-- Charts Section -->
+        <div class="charts-container">
+            <canvas id="barChart"></canvas>
+            <canvas id="lineChart"></canvas>
+            <canvas id="pieChart"></canvas>
+            <canvas id="bubbleChart"></canvas>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
