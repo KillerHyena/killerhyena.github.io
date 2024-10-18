@@ -23,13 +23,18 @@ body, html {
 /* KPI cards styling */
 .kpi-card {
     display: inline-block;
-    width: 22%;
+    width: calc(22% - 20px); /* Adjust width for spacing */
     margin: 10px;
     padding: 20px;
     color: white;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.kpi-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 .kpi-card h3 {
@@ -53,8 +58,18 @@ canvas {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     margin: 10px;
-    width: 45%;
+    width: calc(45% - 20px); /* Adjust width for spacing */
     height: 300px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kpi-card {
+        width: calc(48% - 20px);
+    }
+    canvas {
+        width: calc(100% - 20px);
+    }
 }
