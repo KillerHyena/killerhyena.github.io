@@ -6,39 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPI Dashboard</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+    <script src="app.js" defer></script> <!-- Link to the JavaScript file with defer -->
 </head>
 <body>
-    <!-- Dashboard Layout -->
-    <div class="dashboard-container">
-        <!-- KPI Cards -->
-        <div class="kpi-card" style="background-color: #ff6f61;">
+    <div class="dashboard-container" role="main">
+        <div class="kpi-card" style="background-color: #ff6f61;" aria-label="Last 2000 Subscribers">
             <h3>628.23</h3>
             <p>Last 2000 Subscribers</p>
         </div>
-        <div class="kpi-card" style="background-color: #4caf50;">
+        <div class="kpi-card" style="background-color: #4caf50;" aria-label="Number of Orders Last Month">
             <h3>780</h3>
             <p>Number of Orders Last Month</p>
         </div>
-        <div class="kpi-card" style="background-color: #2196f3;">
+        <div class="kpi-card" style="background-color: #2196f3;" aria-label="Average Profits Previous Month">
             <h3>26.21</h3>
             <p>Average Profits Previous Month</p>
         </div>
-        <div class="kpi-card" style="background-color: #9c27b0;">
+        <div class="kpi-card" style="background-color: #9c27b0;" aria-label="Average Users Visited per Day">
             <h3>50.65</h3>
             <p>Average Users Visited per Day</p>
         </div>
 
-        <!-- Charts Section -->
         <div class="charts-container">
-            <canvas id="barChart"></canvas>
-            <canvas id="lineChart"></canvas>
-            <canvas id="pieChart"></canvas>
-            <canvas id="bubbleChart"></canvas>
+            <canvas id="barChart" aria-label="Bar Chart"></canvas>
+            <canvas id="lineChart" aria-label="Line Chart"></canvas>
+            <canvas id="pieChart" aria-label="Pie Chart"></canvas>
+            <canvas id="bubbleChart" aria-label="Bubble Chart"></canvas>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
-    <script src="app.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
