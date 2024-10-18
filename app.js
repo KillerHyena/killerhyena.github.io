@@ -1,3 +1,4 @@
+// script.js
 let socket;
 
 async function fetchData() {
@@ -65,7 +66,7 @@ async function createCharts() {
     const pieCtx = document.getElementById('pieChart').getContext('2d');
     new Chart(pieCtx, {
         type: 'pie',
-        data : {
+        data: {
             labels: data.pieChart.labels,
             datasets: [{
                 data: data.pieChart.data,
@@ -115,14 +116,4 @@ socket = io('https://example.com/api');
 // Listen for updates from the server
 socket.on('update', (data) => {
     // Update KPI cards
-    document.getElementById('last-subscribers').textContent = data.lastSubscribers;
-    document.getElementById('order-count').textContent = data.orderCount;
-    document.getElementById('average-profit').textContent = data.averageProfit;
-    document.getElementById('average-users').textContent = data.averageUsers;
-
-    // Update charts
-    createCharts();
-});
-
-// Call the function to create charts
-createCharts();
+    document.getElementById('last-subscribers').
